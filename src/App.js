@@ -9,7 +9,7 @@ import FinalProjectPage from './components/FinalProjectPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/PS70">
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage />} />
