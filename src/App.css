@@ -1,0 +1,229 @@
+/* Custom color scheme */
+:root {
+  --primary-black: #000000;
+  --light-gray: #CDD3CE;
+  --off-white: #F9F8F8;
+}
+
+body {
+  background-color: var(--off-white);
+  color: var(--primary-black);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Google-style homepage */
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--off-white);
+  padding-bottom: 200px;
+}
+
+.logo {
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--primary-black);
+  margin-bottom: 2rem;
+  letter-spacing: -2px;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 584px;
+  position: relative;
+}
+
+.search-box {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+  transition: box-shadow 0.2s ease;
+}
+
+.search-box:focus {
+  outline: none;
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.28);
+}
+
+.search-box:hover {
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.28);
+}
+
+.invalid-search {
+  color: #d93025;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Suggestions Dropdown */
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid var(--light-gray);
+  border-top: none;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 6px rgba(32, 33, 36, 0.28);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.suggestions-section {
+  padding: 8px 0;
+}
+
+.suggestions-header {
+  padding: 8px 20px;
+  font-size: 14px;
+  color: #5f6368;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f3f4;
+  margin-bottom: 4px;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+  background-color: #f8f9fa;
+}
+
+.suggestion-icon {
+  margin-right: 12px;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.suggestion-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--primary-black);
+}
+
+.suggestion-type {
+  font-size: 12px;
+  color: #5f6368;
+  margin-left: 8px;
+}
+
+/* Apple Notes-style pages */
+.notes-page {
+  min-height: 100vh;
+  background-color: var(--off-white);
+}
+
+.notes-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  min-height: 600px;
+}
+
+.notes-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-black);
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 1rem;
+}
+
+.notes-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-black);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--off-white) !important;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.navbar-brand {
+  color: var(--primary-black) !important;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: var(--primary-black) !important;
+}
+
+/* Search overlay */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.search-overlay-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-overlay input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  padding: 0 12px;
+  font-size: 16px;
+}
+
+.search-overlay input:focus {
+  outline: none;
+  border-color: var(--primary-black);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 3rem;
+  }
+  
+  .search-container {
+    max-width: 90%;
+  }
+  
+  .notes-container {
+    margin: 0 10px;
+    padding: 20px;
+  }
+}
