@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Kevin's PS70 Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my portfolio website for PS70: Introduction to Digital Fabrication.
 
-## Available Scripts
+## Live Website
 
-In the project directory, you can run:
+🌐 **Portfolio**: [https://ksohnh.github.io/PS70](https://ksohnh.github.io/PS70)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Google-style Homepage**: Clean search interface with autocomplete
+- **14 Assignment Pages**: Individual pages for each assignment with Apple Notes-style UI
+- **About Me Page**: Personal information and background
+- **Final Project Page**: Documentation of final project
+- **Search Functionality**: Find pages by assignment number, title, or keywords
+- **Command+K Shortcut**: Quick search from any page
+- **Responsive Design**: Works on all devices
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Local Development
 
-### `npm test`
+To run the portfolio locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+npm start
+```
 
-### `npm run build`
+The app will open at [http://localhost:3000](http://localhost:3000).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The portfolio is automatically deployed to GitHub Pages using GitHub Actions whenever changes are pushed to the master branch.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Assignment Pages
 
-### `npm run eject`
+Each assignment has its own file in `src/components/assignments/` for easy customization:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Assignment1.js - Assignment14.js
+- Each file contains structured sections for documentation
+- Easy to add text, images, and code snippets
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Customization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Edit the assignment files in `src/components/assignments/` to add your content:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Overview**: Introduction to the assignment
+2. **Process**: Step-by-step documentation
+3. **Results**: Showcase your work
+4. **Reflection**: Lessons learned and challenges
+5. **Images & Documentation**: Add visual content
 
-## Learn More
+## Technology Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React**: Frontend framework
+- **Bootstrap**: UI styling
+- **React Router**: Navigation
+- **GitHub Pages**: Hosting
+- **GitHub Actions**: Automated deployment
