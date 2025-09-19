@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
@@ -12,7 +12,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   // Assignment data
-  const assignments = [
+  const assignments = useMemo(() => [
     { id: 1, title: 'Introduction & Documentation' },
     { id: 2, title: '2D Design & Cutting' },
     { id: 3, title: 'Hand tools and fabrication' },
@@ -27,10 +27,10 @@ const HomePage = () => {
     { id: 12, title: 'Machine Demo / Wildcard' },
     { id: 13, title: 'Next Steps' },
     { id: 14, title: 'Project Prep' }
-  ];
+  ], []);
 
   // Popular/suggested queries
-  const popularQueries = [
+  const popularQueries = useMemo(() => [
     'about me',
     'final project',
     '3d design',
@@ -40,10 +40,10 @@ const HomePage = () => {
     'iot',
     'machine building',
     'project integration'
-  ];
+  ], []);
 
   // All searchable items
-  const allSearchableItems = [
+  const allSearchableItems = useMemo(() => [
     ...assignments.map(assignment => ({
       type: 'assignment',
       id: assignment.id,
@@ -62,7 +62,7 @@ const HomePage = () => {
       title: 'Final Project',
       searchTerms: ['final project', 'final']
     }
-  ];
+  ], [assignments]);
 
   // Handle Command+K shortcut
   useEffect(() => {
@@ -115,7 +115,7 @@ const HomePage = () => {
     });
 
     setFilteredSuggestions(suggestions.slice(0, 8)); // Limit to 8 suggestions
-  }, [searchQuery]);
+  }, [searchQuery, allSearchableItems, popularQueries]);
 
   // Handle keyboard navigation in suggestions
   const handleKeyDown = (event) => {
@@ -150,6 +150,8 @@ const HomePage = () => {
       case 'Escape':
         setShowSuggestions(false);
         setSelectedSuggestionIndex(-1);
+        break;
+      default:
         break;
     }
   };
