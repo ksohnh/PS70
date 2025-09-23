@@ -107,7 +107,7 @@ const AboutPage = () => {
           </ul>
 
           <img src={`${process.env.PUBLIC_URL}/IMG_2432.jpg`} width={300} alt="family"/>
-          <img src={`${process.env.PUBLIC_URL}/IMG_1277.jpg`}= width={300} alt="friends"/>          {/* Placeholder for user content */}
+          <img src={`${process.env.PUBLIC_URL}/IMG_1277.jpg`} width={300} alt="friends"/>          {/* Placeholder for user content */}
           <img src={`${process.env.PUBLIC_URL}/IMG_3542.jpg`} width={300} alt="brother"/>
           <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIaFSvnt13ZrDeXteLZQALlvjkK2G4_JTx8Q&s' alt="medal" width={300}></img>
         </div>
