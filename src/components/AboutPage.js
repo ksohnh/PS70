@@ -95,30 +95,21 @@ const AboutPage = () => {
       <div className="notes-container">
         <div className="notes-title">About Me</div>
         <div className="notes-content">
-          <p>This is where you can add information about yourself.</p>
           
-          <h4>Personal Information</h4>
-          <p>Add your personal details, background, and interests here.</p>
-          
-          <h4>Education & Experience</h4>
-          <p>Include your educational background and relevant experience.</p>
-          
-          <h4>Skills & Interests</h4>
-          <p>List your technical skills, hobbies, and areas of interest.</p>
-          
-          <h4>Contact Information</h4>
-          <p>Add your contact details and social media links.</p>
-          
-          {/* Placeholder for user content */}
-          <div style={{ 
-            border: '2px dashed #CDD3CE', 
-            padding: '20px', 
-            textAlign: 'center', 
-            color: '#CDD3CE',
-            marginTop: '20px'
-          }}>
-            Add your about me content here
-          </div>
+          <h4>I'm Kevin!</h4>
+          <ul>
+            <li>Dunster House, studying Computer Science and English</li>
+            <li>From Irvine, CA</li>
+            <li>Fenced for 12 years, was on HFT 2023-25</li>
+            <li>Trying to learn as much as I can this semester about tech</li>
+            <li>Fav books: When Breath Becomes Air, Glass Bead Game, Harry Potter, Exhalations, </li>
+            <li>Fav authors: Jorge Luis Borges, Elizabeth Bishop, Paul Graham</li>
+          </ul>
+
+          <img src={`${process.env.PUBLIC_URL}/IMG_2432.jpg`} alt="Description of your image" width={300}/>
+          <img src={`${process.env.PUBLIC_URL}/IMG_1277.jpg`} alt="Description of your second image" width={300}/>          {/* Placeholder for user content */}
+          <img src={`${process.env.PUBLIC_URL}/IMG_3542.jpg`} alt="Description of your second image" width={300}/>
+          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIaFSvnt13ZrDeXteLZQALlvjkK2G4_JTx8Q&s' width={300}></img>
         </div>
       </div>
 

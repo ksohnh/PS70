@@ -95,22 +95,6 @@ const FinalProjectPage = () => {
       <div className="notes-container">
         <div className="notes-title">Final Project</div>
         <div className="notes-content">
-          <p>This is where you can document your final project.</p>
-          
-          <h4>Project Overview</h4>
-          <p>Provide a comprehensive overview of your final project, including its purpose and goals.</p>
-          
-          <h4>Design Process</h4>
-          <p>Document your design process, including sketches, prototypes, and iterations.</p>
-          
-          <h4>Implementation</h4>
-          <p>Detail the technical implementation, including hardware, software, and fabrication processes.</p>
-          
-          <h4>Results & Testing</h4>
-          <p>Show your results, testing procedures, and any challenges you encountered.</p>
-          
-          <h4>Future Improvements</h4>
-          <p>Discuss potential improvements and future iterations of your project.</p>
           
           {/* Placeholder for user content */}
           <div style={{ 
@@ -120,7 +104,8 @@ const FinalProjectPage = () => {
             color: '#CDD3CE',
             marginTop: '20px'
           }}>
-            Add your final project content here
+            <p>Will add my final project content here later</p>
+            <p> please refer to assignment 1/week 1 for proposal details</p>
           </div>
         </div>
       </div>
