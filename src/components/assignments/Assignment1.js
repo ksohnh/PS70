@@ -10,7 +10,7 @@ const Assignment1 = () => {
           
           <h4>Project 1: Joint-specific exoskeleton</h4>
           <p>Inspiration: My mom's joints are pretty bad, and they're getting worse so I wanted to make something that would assist her movements</p>
-          <img src="https://designwanted.com/wp-content/uploads/2022/02/Exoskeletons-2.jpeg" width={500}></img>
+          <img src="https://designwanted.com/wp-content/uploads/2022/02/Exoskeletons-2.jpeg" width={500} alt=''></img>
           
           <h5>Specifications:</h5>
             <ul>
@@ -28,9 +28,9 @@ const Assignment1 = () => {
           
           <h4>Project 2: Dumb phone </h4>          
           <p>Inspiration: I hate my phone</p>          
-          <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:761,cw:2507,ch:2507,q:80,w:2507/ycUVcqfyCDs44UkYCwTzMA.jpg" alt='phone5' width={200}></img>
-          <img src="https://hackster.imgix.net/uploads/attachments/970091/1__17qQs2JPE9BjT_xMFaw1Q.jpeg?auto=&format=jpg" alt='phone6' width={200}></img>
-          <img src="https://miro.medium.com/v2/resize:fit:1400/1*k_-V1FZUhA5AEBXmwUiS7A.jpeg" width={200} alt='phone7'></img>
+          <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:761,cw:2507,ch:2507,q:80,w:2507/ycUVcqfyCDs44UkYCwTzMA.jpg" alt='' width={200}></img>
+          <img src="https://hackster.imgix.net/uploads/attachments/970091/1__17qQs2JPE9BjT_xMFaw1Q.jpeg?auto=&format=jpg" alt='' width={200}></img>
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*k_-V1FZUhA5AEBXmwUiS7A.jpeg" width={200} alt=''></img>
 
           <h5>Specifications:</h5>
             <ul>    
@@ -52,10 +52,10 @@ const Assignment1 = () => {
             </ul>
           
           <h5>Design inspirations:</h5>
-          <img src='https://botland.store/img/art/inne/24057_8.jpg' alt='phone1' width={300}></img>
-          <img src='https://lilygo.cc/cdn/shop/files/LILYGO-T-DECK-PRO_9.jpg?v=1742883880' width={300} alt='phone2'></img>
-          <img src="https://images.musicstore.de/images/0960/teenage-engineering-ep-133-k-o-ii_1_SYN0008856-000.jpg" alt='phone3' width={300}></img>
-          <img src='https://teenage.engineering/_img/store/c91abe82329a4d40168256414da501fd9a456e5b8a5c7d2a2702c54cd704fa1e.webp' alt='phone4' width={300}></img>
+          <img src='https://botland.store/img/art/inne/24057_8.jpg' alt='' width={300}></img>
+          <img src='https://lilygo.cc/cdn/shop/files/LILYGO-T-DECK-PRO_9.jpg?v=1742883880' width={300} alt=''></img>
+          <img src="https://images.musicstore.de/images/0960/teenage-engineering-ep-133-k-o-ii_1_SYN0008856-000.jpg" alt='' width={300}></img>
+          <img src='https://teenage.engineering/_img/store/c91abe82329a4d40168256414da501fd9a456e5b8a5c7d2a2702c54cd704fa1e.webp' alt='' width={300}></img>
     </div>
   );
 };
