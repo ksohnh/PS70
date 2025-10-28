@@ -12,7 +12,7 @@ const FinalProjectPage = () => {
     { id: 4, title: 'Microcontroller Programming' },
     { id: 5, title: '3D Design & Printing' },
     { id: 6, title: 'Electronic Input Devices' },
-    { id: 7, title: 'Electronic Output Devices' },
+    { id: 7, title: 'MVP and Electronic Output Devices' },
     { id: 8, title: 'CNC Milling' },
     { id: 9, title: 'Radio, WiFi, Bluetooth (IoT)' },
     { id: 10, title: 'Machine Building and End Effectors' },
