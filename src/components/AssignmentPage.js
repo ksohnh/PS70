@@ -17,11 +17,7 @@ const AssignmentPage = () => {
     { id: 7, title: 'MVP and Electronic Output Devices' },
     { id: 8, title: 'CNC Milling' },
     { id: 9, title: 'Radio, WiFi, Bluetooth (IoT)' },
-    { id: 10, title: 'Machine Building and End Effectors' },
-    { id: 11, title: 'Project Integration' },
-    { id: 12, title: 'Machine Demo / Wildcard' },
-    { id: 13, title: 'Next Steps' },
-    { id: 14, title: 'Project Prep' }
+    { id: 10, title: 'Machine Building and End Effectors' }
   ];
 
   const assignmentId = parseInt(id);
@@ -97,19 +93,6 @@ const AssignmentPage = () => {
 
   return (
     <div className="notes-page">
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container">
-          <span className="navbar-brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-            Kevin's Portfolio
-          </span>
-          <div className="navbar-nav ms-auto">
-            <span className="nav-link" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-              Home
-            </span>
-          </div>
-        </div>
-      </nav>
-
       <div className="notes-container">
         <AssignmentComponent />
       </div>

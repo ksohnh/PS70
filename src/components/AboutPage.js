@@ -79,19 +79,6 @@ const AboutPage = () => {
 
   return (
     <div className="notes-page">
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container">
-          <span className="navbar-brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-            Kevin's Portfolio
-          </span>
-          <div className="navbar-nav ms-auto">
-            <span className="nav-link" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-              Home
-            </span>
-          </div>
-        </div>
-      </nav>
-
       <div className="notes-container">
         <div className="notes-title">About Me</div>
         <div className="notes-content">
