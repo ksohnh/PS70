@@ -1,0 +1,55 @@
+﻿Intro Paragraph:
+The Telephone-Loop Plotter reimagines the childhood game of telephone through iterative, mechanical drawing. Using a combination of stepper and servo motors mounted on a 3D-printed frame, the plotter draws on an iPad surface. What’s drawn is transmitted via a live server connection — not through a camera — to a website interface, where the line data is reprocessed into new motion commands. The result is a feedback loop: each drawing is redrawn, reinterpreted, and slightly degraded over multiple cycles, echoing how messages evolve and distort as they’re passed along.
+Final Demonstration (Circle): https://youtu.be/68NL08yOR-4
+Final Demonstration (Spiral): https://youtu.be/6Iterdpl_lc
+
+
+Initial Steps:
+We first took inventory of the parts that we had, which included rails, three servos, and several 3D printed parts that mount the servo. Using the various parts that were given in the kit, we constructed an initial apparatus that allowed for simple 2D movement across the railing, the same baseline construction that every group had.
+x-axis motion: https://youtube.com/shorts/-XhtgWXwWJQ?feature=share
+x-and-y-axis motion: https://youtube.com/shorts/o2Ki_xpkRjw?feature=share
+
+
+End Effector Design
+Our end effector uses a servo-controlled Apple Pencil mount for precise up-and-down motion. While mechanically similar to the normal pen plotter, its novelty (Bobby approved!)lies in drawing directly on an iPad rather than paper, creating the digital–physical feedback loop. 
+Servo for end effector: https://youtube.com/shorts/1FHGnH5b_gI?feature=share
+
+
+Homing Sequence
+
+
+We developed a reliable homing system using limit switches for precise calibration. Two switches are strategically placed—see below photos—to define the machine's zero position. Components would then trigger the switches, allowing the plotter to reset accurately each time it powers on. We maintain precise alignment between digital and physical coordinates by calibrating the top left and bottom right of the canvas.
+
+
+We also coded an interactive settings menu on the iPad interface (similar to CNC mill controls) that allows users to set reference points (top left, top right, etc.) and fine-tune the origin position in small increments to precisely align with the iPad screen. The homing system saves calibration data on the web interface between sessions, eliminating the need to rehome on each startup...
+Homing interface photo:   
+Homing one axis: https://youtu.be/l308SvD5WA4
+Homing both axis: https://youtu.be/FT1-rDYsAK4
+Homing to origin: https://youtube.com/shorts/5BQX1-Gi6po?feature=share
+Position Mapping
+Our position mapping system translates digital drawing coordinates from the server into precise motor movements on the plotter. Each command received through the WebSocket interface is converted into corresponding X and Y step values, allowing the Apple Pencil to trace the same path on the iPad surface. Because the machine is homed at startup, every position command is mapped relative to a fixed physical origin, ensuring that the digital input and the physical motion remain perfectly synchronized throughout each iterative “telephone-loop” pass. We initially tested the code out with a pen and paper to guarantee proof-of-concept, and once we were sure that the code was working to a certain extent we replaced them with an iPad and Apple Pencil
+
+
+
+
+Paper-and-pencil: https://youtube.com/shorts/msF1RytKKVE?feature=share
+Slow run of final design: https://youtube.com/shorts/_GHZhbSnvcE?feature=share
+Multiple iteration run of final design: https://youtube.com/shorts/9Jux6oXYT88?feature=share
+
+
+Code Implementation
+
+
+Our firmware, written for the ESP32 in Arduino, integrates Wi-Fi connectivity, WebSocket communication, and stepper motor control to enable real-time drawing from a web interface. The code hosts an HTML canvas page that streams coordinate data to the ESP32, which converts pixel positions into precise motor steps and servo movements for pen up/down control. Limit switches define homing positions for calibration, and all motion parameters—speed, acceleration, and range—are tunable in software. This setup allows seamless digital-to-physical translation of drawings while supporting iterative “telephone-loop” redrawing through continuous server feedback.
+
+
+Issues We Solved Through Iterations
+
+
+Belt Tensioning & Motion Smoothness: We used zip ties and a 3D-printed tensioning clip to increase belt tension, and enabled microstepping on the stepper motors to improve motion smoothness and reduce vibration.
+
+
+iPad Mounting System: Kieran CNC-milled a custom wooden mount for Theo’s iPad to position it at the correct height and alignment, ensuring consistent Apple Pencil contact with the drawing surface. Also just looks sick :D 
+
+
+Limit Switches: We had some issues with the limit switches due to faulty wires. We replaced them, changed the positioning of the limit switches, and soldered the connections for permanent installation
